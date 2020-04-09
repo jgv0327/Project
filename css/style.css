@@ -1,28 +1,91 @@
-*{
+ * {
     margin: 0;
     padding: 0;
-    }
-    
-    .wrapper{
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color:rgb(0, 117, 0); 
+    padding: 2rem;
+    width: 100%;
+}
+
+.reference {
+    padding-right: auto;
+    font-size: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding-right: 3rem;
+}
+
+.on-off {
+    background: transparent;
+    border: 0;
+    size: 1rem;
+}
+
+.search-bar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: rgb(13, 158, 0);
+}
+.dropbox {
+    color: white;
+    font-size: 17px;
+    border-radius: 5px; 
+    transition: .25s ease-in-out;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 5rem;
+    align-items: center;
+    text-align: left;
+    padding: 2rem;  
+}
+
+.news-display {
+    border: 1px solid black;
+}
+/*   
+.wrapper {
     width: 1100px;
-    margin: 0 auto;
-    
-    }
-    header{
+    margin: 0 auto;    
+}
+
+header {
     height: 70px;
     background-color:green; 
     width: 100%;
     z-index: 12;
     position: fixed;
     margin: 0 auto;
-    }
-    .logo{
+}
+
+header .toggle{
+    background: transparent;
+    border: 0;
+}
+
+.logo {
     width: 30%;
     float: left;
-    line-height: 80px;
-    
-    }
-    .logo a{
+    line-height: 80px; 
+}
+
+.logo a {
     margin: 0;
     text-decoration: none;
     font-size: 15px;
@@ -30,57 +93,61 @@
     float: left;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
-    }
-    nav{
+}
+
+nav {
     float: right;
     line-height: 80px;
-    }
-    nav a{
+}
+
+nav a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     margin: 0 10px;
     color: #fff;
     font-weight: 700;
-    }
-    .banner-area{
+}
+
+.banner-area {
     width: 100%;
     height: 500px;
     position: fixed;
     top: 120px;
-    }
-    .content-area{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 100%;
+}
 
+.content-area  { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 70%;
     position: relative;
-    background-color: green;
     top: 70px;
     height: 90px;
     background-color:rgb(80, 224, 80);
     align-items: center;
     margin: auto;
-    }
-    select{
+}
+
+select {
     outline: none;
     box-shadow: 0 2px #000;
     background: var(--bg-select);
     border: 1px solid #fcfcfc;
     border-radius: 5px;
     font-size: 4rem;
-    
-    }
-    .select-country{
-        left: 39%;
-        top: -5%;
-        position: relative;
-        display: block;
-        width: 18em;
-        height: 2em;
-        overflow: hidden;
-    }
-    select{
+}
+
+.select-country, .select-category{
+    left: 39%;
+    top: -5%;
+    position: relative;
+    display: block;
+    width: 18em;
+    height: 2em;
+    overflow: hidden;
+}
+
+select {
     width: 90%;
     height: 100%;
     margin: 0;
@@ -89,21 +156,11 @@
     font-size: 1em;
     width: 18em;
     height: 2em;
-    
-    }
-    .select-category{
-    left: 39%;
-    top: -5%;
-    position: relative;
-    display: block;
-    width: 18em;
-    height: 2em;
-    overflow: hidden;
-    }
-    html{
+}
+
+html {
     height: 100%;
-    font-family: 'Montserrat';
-    
+    font-family: 'Montserrat';  
     --bg: #FCFCFC;
     --bg-panel: #ebebeb;
     --color-headings: #ebebeb;
@@ -112,8 +169,9 @@
     --bg-content-area: limegreen;
     --bg-select:#fcfcfc;
     --bg-box-shadow: 0 0 0 2px #FCFcfc;
-    }
-    html[data-theme='dar­k']{
+}
+    
+html[data-theme='dar­k'] {
     --bg: #333;
     --bg-panel: #434343;
     --color-headings: #ebebeb;
@@ -122,19 +180,23 @@
     --bg-content-area: #333;
     --bg-select:#333;
     --bg-box-shadow: 0 0 0 2px #FCFcfc;
-    }
-    body{
+}
+
+body {
     background-color: white;
-    }
-    input[type=checkbox]­{
+}
+   
+input[type=checkbox]­ {
     height: 0;
     width: 0;
     visibility: hidden;
-    }
-    input{
+}
+
+input {
     line-height: 80px;
-    }
-    label{
+}
+
+label {
     margin: 28px 0px;
     cursor: pointer;
     text-indent: -9999px;
@@ -146,8 +208,9 @@
     float: right;
     border-radius: 100px ;
     position: relative;
-    }
-    label::after{
+}
+
+label::after {
     content: '';
     position: absolute;
     top: 3px;
@@ -158,31 +221,34 @@
     background: green;
     border-radius: 90px;
     transition: 0.3;
-    }
-    input:checked + label{
+}
+
+input:checked + label{
     background: var(--color-headings­);
-    }
-    input:checked + label::after{
+}
+
+input:checked + label::after{
     left: calc(100% - 5px);
     transform: translateX(-100%); background: #333;
-    }
-    label:active::after{
+}
+   
+label:active::after{
     width: 45px;
-    }
-    html.transition,
-    html.transition *,
-    html.transition *::before,
-    html.transition
-    *::after{
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition
+*::after {
     transition: all 750ms !important;
     transition-delay: 0 !important;
-    }
-    input[type=text]{
+}
+
+input[type=text]{
     width: 20%;
     height: 36px;
     float: right;
     border: 2px solid;
     border-radius: 8px;
-    
-    
-    }
+} */
