@@ -47,208 +47,46 @@ a {
     transition: .25s ease-in-out;
 }
 
-.news-container {
+.containers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 5rem;
+    grid-gap: 20px;
+    list-style: none;
     align-items: center;
-    text-align: left;
-    padding: 2rem;  
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 30px;
 }
+.news-container{
+    width: 350px;
+    height: 650px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;   
+    background-color:white;    
+} 
 
 .news-display {
     border: 1px solid black;
 }
-/*   
-.wrapper {
-    width: 1100px;
-    margin: 0 auto;    
-}
 
-header {
-    height: 70px;
-    background-color:green; 
+.news-image img {
+    padding: none;
     width: 100%;
-    z-index: 12;
-    position: fixed;
-    margin: 0 auto;
+    height: 230px;
+    border-style: solid 1px gray;
 }
 
-header .toggle{
-    background: transparent;
-    border: 0;
-}
-
-.logo {
-    width: 30%;
-    float: left;
-    line-height: 80px; 
-}
-
-.logo a {
-    margin: 0;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 700;
-    float: left;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
-}
-
-nav {
-    float: right;
-    line-height: 80px;
-}
-
-nav a {
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    margin: 0 10px;
-    color: #fff;
-    font-weight: 700;
-}
-
-.banner-area {
+.result-container{
     width: 100%;
-    height: 500px;
-    position: fixed;
-    top: 120px;
+    display: flex;
+    justify-content: center;
 }
 
-.content-area  { 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 70%;
-    position: relative;
-    top: 70px;
-    height: 90px;
-    background-color:rgb(80, 224, 80);
-    align-items: center;
-    margin: auto;
+.news-info{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+    text-align: justify;
+    margin: 1rem;
 }
-
-select {
-    outline: none;
-    box-shadow: 0 2px #000;
-    background: var(--bg-select);
-    border: 1px solid #fcfcfc;
-    border-radius: 5px;
-    font-size: 4rem;
-}
-
-.select-country, .select-category{
-    left: 39%;
-    top: -5%;
-    position: relative;
-    display: block;
-    width: 18em;
-    height: 2em;
-    overflow: hidden;
-}
-
-select {
-    width: 90%;
-    height: 100%;
-    margin: 0;
-    padding: 0 0 0 .5em;
-    color: black;
-    font-size: 1em;
-    width: 18em;
-    height: 2em;
-}
-
-html {
-    height: 100%;
-    font-family: 'Montserrat';  
-    --bg: #FCFCFC;
-    --bg-panel: #ebebeb;
-    --color-headings: #ebebeb;
-    --color-text:#333;
-    --bg-header: green;
-    --bg-content-area: limegreen;
-    --bg-select:#fcfcfc;
-    --bg-box-shadow: 0 0 0 2px #FCFcfc;
-}
-    
-html[data-theme='dar­k'] {
-    --bg: #333;
-    --bg-panel: #434343;
-    --color-headings: #ebebeb;
-    --color-text:#b5b5b5­;
-    --bg-header: #333;
-    --bg-content-area: #333;
-    --bg-select:#333;
-    --bg-box-shadow: 0 0 0 2px #FCFcfc;
-}
-
-body {
-    background-color: white;
-}
-   
-input[type=checkbox]­ {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-}
-
-input {
-    line-height: 80px;
-}
-
-label {
-    margin: 28px 0px;
-    cursor: pointer;
-    text-indent: -9999px;
-    width: 52px;
-    height: 27px;
-    font-size: 1rem;
-    box-shadow: 0 0 0 2px #FCFCFC; 
-    background: var(--bg-header);
-    float: right;
-    border-radius: 100px ;
-    position: relative;
-}
-
-label::after {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 20px;
-    height: 20px;
-    box-shadow: 0 0 0 3px #FCFCFC; 
-    background: green;
-    border-radius: 90px;
-    transition: 0.3;
-}
-
-input:checked + label{
-    background: var(--color-headings­);
-}
-
-input:checked + label::after{
-    left: calc(100% - 5px);
-    transform: translateX(-100%); background: #333;
-}
-   
-label:active::after{
-    width: 45px;
-}
-
-html.transition,
-html.transition *,
-html.transition *::before,
-html.transition
-*::after {
-    transition: all 750ms !important;
-    transition-delay: 0 !important;
-}
-
-input[type=text]{
-    width: 20%;
-    height: 36px;
-    float: right;
-    border: 2px solid;
-    border-radius: 8px;
-} */
