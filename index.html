@@ -25,160 +25,39 @@
     <div class="search-bar">
         <div class="dropbox">
             <select name="theme" id="sltr-1">
-                <option value="1">Philippines</option>
-                <option value="2">United States of America</option>
-                <option value="3">United Kingdom</option>
-                <option value="4">Canada</option>
-                <option value="5">France</option>
-                <option value="6">Australia</option>
-                <option value="7">Argentina</option>
-                <option value="8">Indonesia</option>
+                <option value="ph">Philippines</option>
+                <option value="us">United States of America</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+                <option value="fr">France</option>
+                <option value="au">Australia</option>
+                <option value="ar">Argentina</option>
+                <option value="id">Indonesia</option>
             </select>
         </div>
         <div class="dropbox">
-            <select name="theme" id="sltr-1">
-                <option value="1">All category</option>
-                <option value="3">Business</option>
-                <option value="3">Entertainm­ent</option>
-                <option value="3">General</option>
-                <option value="3">Health</option>
-                <option value="3">Science</option>
-                <option value="3">Sports</option>
-                <option value="8">Technology­</option>
+            <select name="theme" id="sltr-2">
+                <option value="">All category</option>
+                <option value="business">Business</option>
+                <option value="entertainm­ent">Entertainm­ent</option>
+                <option value="general">General</option>
+                <option value="health">Health</option>
+                <option value="science">Science</option>
+                <option value="sports">Sports</option>
+                <option value="technology­">Technology­</option>
             </select>
         </div>
         <div class="dropbox">
-            <input type="text" placeholder="Key Word">
+            <input type="text" id="search" placeholder="Key Word">
             <button type="submit" id="btnSearch"><i class="fa fa-search"></i></button>
         </div>
     </div>
-
-    <div class="news-container">
-        <div class="news-diplay">
-            <div class="image">
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, reprehenderit!</h2>
-            </div>
-            <div class="news-info">
-                <h2>Lorem ipsum dolor sit amet.</h2>
-            </div>
-        </div>
-        <div class="news-diplay">
-            <div class="image">
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, reprehenderit!</h2>
-            </div>
-            <div class="news-info">
-                <h2>Lorem ipsum dolor sit amet.</h2>
-            </div>
-        </div>
-        <div class="news-diplay">
-            <div class="image">
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, reprehenderit!</h2>
-            </div>
-            <div class="news-info">
-                <h2>Lorem ipsum dolor sit amet.</h2>
-            </div>
-        </div>
-        <div class="news-diplay">
-            <div class="image">
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, reprehenderit!</h2>
-            </div>
-            <div class="news-info">
-                <h2>Lorem ipsum dolor sit amet.</h2>
-            </div>
-        </div>
-        <div class="news-diplay">
-            <div class="image">
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, reprehenderit!</h2>
-            </div>
-            <div class="news-info">
-                <h2>Lorem ipsum dolor sit amet.</h2>
-            </div>
-        </div>
-        <div class="news-diplay">
-            <div class="image">
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, reprehenderit!</h2>
-            </div>
-            <div class="news-info">
-                <h2>Lorem ipsum dolor sit amet.</h2>
-            </div>
-        </div>
+    <br>
+    <div class="result-container">
+        <h2 class="results"></h2>
     </div>
-    <!-- <div class="newsContainer">
-        <div class="newsHeader">
-            <li><img src="${article.urlToImage}"></li>
-        </div>
-        <div class="newsBody">
-            <li><h4>${article.title}</h4></li>
-            <li>${article.source.name}</li>
-            <li><p>${article.content}</p></li>
-            <div class="newsUtility">
-                <a href="${article.url}">Go to this Page</a>
-                <button><i class="fa fa-bookmark-o" id="${containerId}"></i></button> 
-            </div>
-        </div>
-        <div class="newsFooter">
-            <li><p>Published at ${article.publishedAt}</p></li>
-        </div>
-    </div> -->
+    <ul class="containers"></ul>               
 
-    <!-- <div class="outer-container">
-        <div class="result-container">
-            <h2 class="results"></h2>
-        </div>
-        <ul class="containers"></ul>
-        <div class="load-none" id="load">
-            <button >Load More News </button>
-        </div>
-        
-    </div>
-    <div class="d-flex justify-content-center">
-        <div class="loading-sign" role="status" id="spinner">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div> -->
-    <!-- <div class="container">
-        <header>
-            <div class="wrapper">
-                <div class="logo">
-                    <a href="">News Search and Bookmarks</a>
-                </div>
-                <nav>
-                    <a href="">Top News</a>
-                    <a href="">Bookmarks</a>
-                    <a href=""><input type="checkbox" id="switch" name="theme"> <label for="switch">Toggle<­/label></a>
-                </nav> 
-            </div>
-        </header>
-        <div class="content-area"­>
-            <div class="select-countr­y">
-                <select name="theme" id="sltr-1">
-                    <option value <"5">Philippines</option>
-                    <option value <"2">United States of America</option>
-                    <option value <"3">United Kingdom</option>
-                    <option value <"4">Canada</option>
-                    <option value <"5">France</option>
-                    <option value <"5">Australia</option>
-                    <option value <"5">Argentina</option>
-                    <option value <"5">Indonesia</option>
-                </select>
-            </div>
-            <div class ="select-category">
-                <select name="theme" id="sltr-1">
-                    <option value="1">All category</option>
-                    <option value="3">Business</option>
-                    <option value="3">Entertainm­ent</option>
-                    <option value="3">General</option>
-                    <option value="3">Health</option>
-                    <option value="3">Science</option>
-                    <option value="3">Sports</option>
-                    <option value="8">Technology­</option>
-                </select>
-            </div>
-            <div class="select-search­">
-                <input type="text" placeholder="Key Word">
-            </div>
-        </div>
-    </div> -->
     <script src="./js/api.js"></script>
 </body>
 </html>
