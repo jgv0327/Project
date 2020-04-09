@@ -4,9 +4,33 @@
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+body.light {
+    color: black;
+    background-color:rgb(0, 196, 0); 
+}
+
+body.light .header {
+    background-color:rgb(0, 117, 0); 
+    color: black;
+}
+
+body.light .search-bar { 
+    background-color:rgb(0, 143, 0); 
+}
+
+body.dark {
+    background-color:rgb(45, 46, 45); 
+}
+
+body.dark .header {
+    background-color:rgb(20, 20, 20); 
+}
+
+body.dark .search-bar { 
+    background-color:rgb(0, 0, 0); 
+}
 
 header {
-    background-color:rgb(0, 117, 0); 
     padding: 2rem;
     width: 100%;
 }
@@ -38,7 +62,6 @@ a {
     align-items: center;
     text-align: center;
     padding: 2rem;
-    background-color: rgb(13, 158, 0);
 }
 .dropbox {
     color: white;
