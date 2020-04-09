@@ -3,6 +3,8 @@ const choices = document.querySelector('#sltr-2')
 const search = document.querySelector('#search')
 const results = document.querySelector('.results')
 const containers = document.querySelector('.containers')
+const toggle = document.querySelector('#toggle')
+const body = document.querySelector('#theme')
 let li = ''
 
 const URL = 'https://newsapi.org/v2/top-headlines?apiKey=91c9d585d313447bbd41a76101a567ee&country='+country.value+'&category='+choices.value+'&q='+search.value+'&pageSize=50'
@@ -41,3 +43,15 @@ async function showArticles() {
 }
 
 showArticles()
+
+toggle.addEventListener("click", e =>{
+    if(toggle.className == "fa fa-toggle-on"){
+        toggle.className = "fa fa-toggle-off"
+        body.className = "dark"
+    }
+    else{
+        toggle.className = "fa fa-toggle-on"
+        body.className = "light"
+    }
+    e.preventDefault()
+})
