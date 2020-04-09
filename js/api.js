@@ -1,13 +1,15 @@
 const country = document.querySelector('#sltr-1')
 const choices = document.querySelector('#sltr-2')
-const search = document.querySelector('#search')
 const results = document.querySelector('.results')
-const containers = document.querySelector('.containers')
+const search = document.querySelector('#search')
+const searching = document.querySelector('#searching')
 const toggle = document.querySelector('#toggle')
 const body = document.querySelector('#theme')
+const containers = document.querySelector('.containers')
 let li = ''
+let reload = 1
 
-const URL = 'https://newsapi.org/v2/top-headlines?apiKey=91c9d585d313447bbd41a76101a567ee&country='+country.value+'&category='+choices.value+'&q='+search.value+'&pageSize=50'
+const URL = 'https://newsapi.org/v2/top-headlines?apiKey=91c9d585d313447bbd41a76101a567ee&country='+country.value+'&category='+choices.value+'&q='+search.value+'&page='+reload+'&pageSize=50'
 fetch(URL)
     .then(res => res.json())
     .then(data => data)
@@ -43,6 +45,16 @@ async function showArticles() {
 }
 
 showArticles()
+window.onload=function(){
+    showArticles();
+}
+
+searching.addEventListener("click", e=> {
+    e.preventDefault()
+    containers.innerHTML = ''
+    reload = 1
+    showArticles(e)  
+})
 
 toggle.addEventListener("click", e =>{
     if(toggle.className == "fa fa-toggle-on"){
